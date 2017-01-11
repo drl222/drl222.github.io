@@ -53,6 +53,10 @@ header {
 	background: #daedff; /*just in case the gradients don't work*/
 }
 
+.description {
+	vertical-align: middle;
+}
+
 html, body {
 	height: 90%; /*If the below fails*/
  	height: -moz-calc(100% - 2.5em); /* Firefox */
