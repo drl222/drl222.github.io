@@ -24,9 +24,9 @@ var STAR_FAINTEST_MAG = 5.5;
 var STAR_SCALE = 1.4;
 
 //data constants
-var BORDER_FILE_NAME = "http://mcd.ischool.drexel.edu/dlin/StarMap/data/ConstellationBorders.csv";
-var STAR_FILE_NAME = "http://mcd.ischool.drexel.edu/dlin/StarMap/data/bsc5.csv";
-var NAME_FILE_NAME = "http://mcd.ischool.drexel.edu/dlin/StarMap/data/ConstellationList.csv";
+var BORDER_FILE_NAME = "data/ConstellationBorders.csv";
+var STAR_FILE_NAME = "data/bsc5.csv";
+var NAME_FILE_NAME = "data/ConstellationList.csv";
 var NORTH_CONSTELLATION = "UMI";
 var SOUTH_CONSTELLATION = "OCT";
 var SPLIT_CONSTELLATION = "SER";
