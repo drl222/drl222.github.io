@@ -5,7 +5,7 @@ function CarouselDemoCtrl($scope, $http) {
   function getSlides($scope, $http) {
        var slides = [];
         $http({
-              url: '../getName.cgi',
+              url: 'http://mcd.ischool.drexel.edu/dlin/getName.cgi',
               method: "GET"
           }).success(function (data) {
                   slides = data.characters;
@@ -23,7 +23,7 @@ function CarouselDemoCtrl($scope, $http) {
   function getStats(id, $scope, $http) {
     $scope.id = id;
     $http({
-              url: '../getStats.cgi?id=' + id,
+              url: 'http://mcd.ischool.drexel.edu/dlin/getStats.cgi?id=' + id,
               method: "GET"
           }).success(function (data) {
                   $scope.stats = data;
@@ -31,7 +31,7 @@ function CarouselDemoCtrl($scope, $http) {
                   console.log(status);
               });
     $http({
-              url: '../getGrowths.cgi?id=' + id,
+              url: 'http://mcd.ischool.drexel.edu/dlin/getGrowths.cgi?id=' + id,
               method: "GET"
           }).success(function (data) {
                   $scope.growths = data;
@@ -45,7 +45,7 @@ function CarouselDemoCtrl($scope, $http) {
   function getClasses(id, $scope, $http) {
     $scope.id = id;
     $http({
-              url: '../getClasses.cgi?id=' + id,
+              url: 'http://mcd.ischool.drexel.edu/dlin/getClasses.cgi?id=' + id,
               method: "GET"
           }).success(function (data) {
                   $scope.classList = data.classes;
@@ -77,7 +77,7 @@ function CarouselDemoCtrl($scope, $http) {
 
   function getClass(id, $scope, $http) {
     $http({
-              url: '../getClassStats.cgi?name=' + id,
+              url: 'http://mcd.ischool.drexel.edu/dlin/getClassStats.cgi?name=' + id,
               method: "GET"
           }).success(function (data) {
                   $scope.classStats = data;
@@ -85,7 +85,7 @@ function CarouselDemoCtrl($scope, $http) {
                   console.log(status);
               });
     $http({
-              url: '../getClassGrowths.cgi?name=' + id,
+              url: 'http://mcd.ischool.drexel.edu/dlin/getClassGrowths.cgi?name=' + id,
               method: "GET"
           }).success(function (data) {
                   $scope.classGrowths = data;
