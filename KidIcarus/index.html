@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<HTML>
+	<HEAD>
+		<title>Weapon Fusion in Kid Icarus: Uprising</title>
+		<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+		<link rel="stylesheet" type="text/css" href="weaponsStyle.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+		<script src="weaponFusion.js"></script>
+	</HEAD>
+	<BODY ng-app="weapons">
+		<header><h1>Weapon Fusion in Kid Icarus: Uprising</h1></header>
+		<div id="main" ng-app="weapons">
+
+			<div ng-controller="FusionController as ctrl">
+				<div id="left-bar">
+					<p>Choose two weapon classes:</p>
+					<form name="typeFusion">
+						<select ng-model="ctrl.chosenType[0]">
+							<option ng-repeat="type in ctrl.weaponTypes" value="{{type}}">{{type}}</option>
+						</select>
+						<br/>
+						<select ng-model="ctrl.chosenType[1]">
+							<option ng-repeat="type in ctrl.weaponTypes" value="{{type}}">{{type}}</option>
+						</select>
+					</form>
+				</div>
+
+				<div id="right-bar">
+					<section ng-show="ctrl.finalType">
+						<h2>{{ctrl.chosenType[0]}} + {{ctrl.chosenType[1]}} &rarr; {{ctrl.getCombined()}}</h2>
+						<p>Click on a weapon from each of the input weapon classes. The produced weapon will be highlighted on the right, unless it is one of the rare instances in which the resulting weapon is not of the expected class.</p>
+
+						<div class="list" ng-repeat="type in ctrl.chosenType track by $index">
+							<h3>{{type}} <img ng-src="{{type}}.png"></h3>
+							<ul>
+								<li ng-repeat="weapon in ctrl.weaponNames[type]">
+									<a href="" ng-click="ctrl.addSelect($index, $parent.$index)" ng-class="{ selected: $index === ctrl.chosenWeapon[$parent.$index]}">{{weapon}}</a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="list">
+							<h3>{{ctrl.finalType}} <img ng-src="{{ctrl.finalType}}.png"></h3>
+							<ul>
+								<li ng-repeat="weapon in ctrl.weaponNames[ctrl.finalType]">
+									<span  ng-class="{ selected: $index === ctrl.finalWeaponNumber}">{{weapon}}</span>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div><!--#right-bar-->
+
+				<div id="bottom-bar">
+					<h3 ng-show="ctrl.getWeaponName(2)">{{ctrl.getWeaponName(0)}} + {{ctrl.getWeaponName(1)}} &rarr; {{ctrl.getWeaponName(2)}}</h3>
+				</div>
+			</div><!--ng-controller="FusionController"-->
+		</div><!--#main-->
+	</BODY>
+</HTML>

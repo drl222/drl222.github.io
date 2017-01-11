@@ -1,0 +1,32 @@
+
+
+<div id="ePanel">
+	<div class="pHeading"> Mapping Source: AAT</div>
+	<div class="iPanel1" ng-hide="showFacets">
+	<form name="search">
+		<input ng-model="query" type="search" placeholder="Search">
+		<input type="submit" value="Go!" ng-click="getSourceTerm(query)">
+		<!--input align="right" type="checkbox" ng-model="showFacets">Hide source-->
+	</form>
+
+		  <ul class="scroll-part">
+			<li ng-repeat="c in concepts">
+				<a ng-click="addSelected($index, c.id)" ng-class="{selected: $index === conceptSelected }">{{c.preferredstring}}</a>
+			</li>
+		  </ul>
+	</div>
+
+	<div class="pHeading" ng-hide="showFacets">Target: ARTSTOR</div>
+	<div class="iPanel2" ng-hide="showFacets">
+		  <ul class="scroll-part">
+			<li ng-repeat="t in targets">
+				<input type="checkbox" ng-model="listSelected[$index]">{{t.artstor_string}}
+			</li>
+		  </ul>
+		<button ng-click="selectAllFacets()">Select All</button>
+		<button ng-click="deselectAllFacets()">Deselect All</button>
+		<button ng-click="getQuery()">Search</button>
+	 </div>
+
+	</div>
+</div>

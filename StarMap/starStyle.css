@@ -1,0 +1,113 @@
+body {
+	background-color: #000022;
+	margin: 0%;
+	padding: 1%;
+	color: #ffddee;
+}
+
+h1, h2, h3 {
+	color: #ffff99;
+	text-align: center;
+}
+
+a {
+	color: #7777ff;
+	text-decoration: underline;
+}
+
+a:hover, a:active {
+	color: #333388;
+}
+
+#instructions {
+	width: 99%;
+}
+
+#main_div {
+	width: 99%;
+	border: 1px solid #666666;
+	margin: 0;
+	padding: 0;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	overflow:hidden;
+}
+
+#nav_div {
+	float: right;
+	background-color:#120a30;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	width: 20%;
+	height: 100%;
+}
+
+#canvas_div {
+	float:left;
+	background-color:#000011;
+	margin: 0px;
+	width: 80%;
+}
+
+#canvas {
+	background-color:black;
+	border: 4px solid #aaaaaa;
+	border-radius: 25px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#rand_const {
+	color: #dd3333;
+	font-weight: bold;
+}
+
+#nav table {
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid white;
+	background-color: #333344
+}
+
+#nav td {
+	width: 50px;
+}
+
+#nav button {
+	width: 100%;
+	background-color: #9999ff;
+	border: none;
+	border-radius: 5px;
+}
+
+#nav button:hover {
+	background-color:#8888cc;
+}
+
+#nav button:active {
+	background-color:#5555aa;
+}
+
+#already_found {
+	list-style-type: none;
+}
+
+#already_found li{
+	float:left;
+	width:170px;
+}
+
+.unfound {
+	color:#555566;
+}
+
+.found {
+	color:#bb0000;
+}
+
+/** backwards compatability */
+header, section, footer, aside, nav, main, article, figure {
+	display: block;
+} 

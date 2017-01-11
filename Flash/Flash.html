@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+	<title>Flash Projects</title>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.27/angular.min.js"></script>
+	<script src="flashScript.js"></script>
+    <link href="flashStyle.css" rel="stylesheet">
+</head>
+
+<body ng-app="flashApp">
+	<header id="topbar">
+		<h1>Projects I've made in Adobe Flash and ActionScript</h1>
+	</header>
+
+	<div ng-controller="Ctrl">
+		<div id="leftbar">
+			<h3>Click to show project</h3>
+			<ul ng-repeat="project in projects">
+				<li><a ng-click="changeProject(project)">{{project}}</a></li>
+			</ul>
+		</div>
+		<div id="rightbar">
+			<h3>{{data.project}}</h3>
+			<object ng-data="{{data.url}}" data="PythagorasFractal.swf" height="{{data.h}}" width="{{data.w}}" id="swf">
+				An error occurred when displaying the swf file.
+			</object>
+			<p>{{data.blurb}}</p>
+		</div>
+	</div>
+</HTML>

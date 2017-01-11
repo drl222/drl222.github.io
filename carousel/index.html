@@ -1,0 +1,141 @@
+<!doctype html>
+<html ng-app="plunker">
+  <head>
+    <title>Characters in Fire Emblem: Awakening</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.js"></script>
+    <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.9.0.js"></script>
+    <script src="script.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body ng-controller="CarouselDemoCtrl">
+
+    <div class="heading">
+      <h1>Playable Characters in Fire Emblem: Awakening</h1>
+    </div>
+
+    <div class="leftColumn">
+      <input type="text" ng-model="search" class="search-query" placeholder="Search">
+      <table>
+      <thead>
+        <tr>
+        <th>Character</th>
+        <th>Base Class</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="clickable" ng-repeat="slide in slides | filter:search" ng-class-even="'evenRow'" ng-class-odd="'oddRow'" ng-click="getStats(slide.id)">
+        <td>
+          <img ng-src="{{slide.thumb}}" popover="{{slide.name}}" popover-placement="left" popover-trigger="mouseenter"/>
+        </td>
+        <td>
+          <span popover="Alternate classes: {{slide.altClass1}} {{slide.altClass2}} {{slide.altClass3}}" popover-placement="right" popover-trigger="mouseenter">{{slide.class}}</span>
+        </td>
+        </tr>
+      </tbody>
+      </table>
+    </div>
+
+<div class="rightColumn">
+  <h2>{{stats.name}}</h2>
+  <div class="stats">
+      <div class="classListing">
+        <h4>Possible Classes</h4>
+        <ul>
+          <li ng-repeat="class in classList"><a ng-click="getClass(class.class)">{{class.class}}</a></li>
+        </ul>
+      </div>
+
+      <img src="../images/fullBody/{{stats.name}}.jpg" class="TheImage"/>
+
+      <h3>Stats as a {{classGrowths.name}}</h3>
+      <table>
+        <tr>
+          <th class="oddRow"> </th>
+          <th class="evenRow">HP</th>
+          <th class="oddRow">Str</th>
+          <th class="evenRow">Mag</th>
+          <th class="oddRow">Skl</th>
+          <th class="evenRow">Spd</th>
+          <th class="oddRow">Lck</th>
+          <th class="evenRow">Def</th>
+          <th class="oddRow">Res</th>
+        </tr>
+        <tr class="faded">
+          <th class="evenRow">Cap Modifiers</th>
+          <td class="oddRow">{{0}}</td>
+          <td class="evenRow">{{stats.StrCap}}</td>
+          <td class="oddRow">{{stats.MagCap}}</td>
+          <td class="evenRow">{{stats.SklCap}}</td>
+          <td class="oddRow">{{stats.SpdCap}}</td>
+          <td class="evenRow">{{stats.LckCap}}</td>
+          <td class="oddRow">{{stats.DefCap}}</td>
+          <td class="evenRow">{{stats.ResCap}}</td>
+        </tr>
+        <tr class="faded">
+          <th class="oddRow">Class Caps</th>
+          <td class="evenRow">{{classStats.HPCap}}</td>
+          <td class="oddRow">{{classStats.StrCap}}</td>
+          <td class="evenRow">{{classStats.MagCap}}</td>
+          <td class="oddRow">{{classStats.SklCap}}</td>
+          <td class="evenRow">{{classStats.SpdCap}}</td>
+          <td class="oddRow">{{classStats.LckCap}}</td>
+          <td class="evenRow">{{classStats.DefCap}}</td>
+          <td class="oddRow">{{classStats.ResCap}}</td>
+        </tr>
+        <tr>
+          <th class="evenRow">Total Cap</th>
+          <td class="oddRow">{{classStats.HPCap}}</td>
+          <td class="evenRow">{{add(stats.StrCap, classStats.StrCap)}}</td>
+          <td class="oddRow">{{add(stats.MagCap, classStats.MagCap)}}</td>
+          <td class="evenRow">{{add(stats.SklCap, classStats.SklCap)}}</td>
+          <td class="oddRow">{{add(stats.SpdCap, classStats.SpdCap)}}</td>
+          <td class="evenRow">{{add(stats.LckCap, classStats.LckCap)}}</td>
+          <td class="oddRow">{{add(stats.DefCap, classStats.DefCap)}}</td>
+          <td class="evenRow">{{add(stats.ResCap, classStats.ResCap)}}</td>
+        </tr>
+        <tr class="faded">
+          <th class="oddRow">Growth Rates</th>
+          <td class="evenRow">{{growths.HPGrowth}}</td>
+          <td class="oddRow">{{growths.StrGrowth}}</td>
+          <td class="evenRow">{{growths.MagGrowth}}</td>
+          <td class="oddRow">{{growths.SklGrowth}}</td>
+          <td class="evenRow">{{growths.SpdGrowth}}</td>
+          <td class="oddRow">{{growths.LckGrowth}}</td>
+          <td class="evenRow">{{growths.DefGrowth}}</td>
+          <td class="oddRow">{{growths.ResGrowth}}</td>
+        </tr>
+        <tr class="faded">
+          <th class="evenRow">Class Growths</th>
+          <td class="oddRow">{{classGrowths.HPGrowth}}</td>
+          <td class="evenRow">{{classGrowths.StrGrowth}}</td>
+          <td class="oddRow">{{classGrowths.MagGrowth}}</td>
+          <td class="evenRow">{{classGrowths.SklGrowth}}</td>
+          <td class="oddRow">{{classGrowths.SpdGrowth}}</td>
+          <td class="evenRow">{{classGrowths.LckGrowth}}</td>
+          <td class="oddRow">{{classGrowths.DefGrowth}}</td>
+          <td class="evenRow">{{classGrowths.ResGrowth}}</td>
+        </tr>
+        <tr>
+          <th class="oddRow">Total Growths</th>
+          <td class="evenRow">{{add(growths.HPGrowth, classGrowths.HPGrowth)}}</td>
+          <td class="oddRow">{{add(growths.StrGrowth, classGrowths.StrGrowth)}}</td>
+          <td class="evenRow">{{add(growths.MagGrowth, classGrowths.MagGrowth)}}</td>
+          <td class="oddRow">{{add(growths.SklGrowth, classGrowths.SklGrowth)}}</td>
+          <td class="evenRow">{{add(growths.SpdGrowth, classGrowths.SpdGrowth)}}</td>
+          <td class="oddRow">{{add(growths.LckGrowth, classGrowths.LckGrowth)}}</td>
+          <td class="evenRow">{{add(growths.DefGrowth, classGrowths.DefGrowth)}}</td>
+          <td class="oddRow">{{add(growths.ResGrowth, classGrowths.ResGrowth)}}</td>
+        </tr>
+      </table>
+      <br/>
+  </div>
+  <br/>
+  <div class="navBar">
+    <a ng-click="getStats(id-1)">&larr; {{slides[checkIDIndex(id-2)].name}}</a>
+    {{slides[id-1].name}}
+    <a ng-click="getStats(id+1)">{{slides[checkIDIndex(id)].name}} &rarr;</a>
+  </div>
+</div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+header {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 1em;
+	margin-bottom: 0em;
+	padding-top: 1em;
+	padding-bottom: 1em;
+	width: 94%;
+
+	background-color: #6789bc;
+
+	background-image: url("images/clouds.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+#topbar-container {
+    display: table;
+    margin: auto;
+    padding: 10px;
+	background-color: #abcdef; /*for IE8 and earlier*/
+	background-color: rgba(171,205,239,0.56);
+}
+
+#topbar h3{
+	margin: 0px;
+	text-align: center;
+	color: #555555;
+}
+
+#wrapper {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	width: 94%;
+}
+
+#leftbar {
+	position: relative;
+	width: 37%;
+	display: table-cell; /* doesn't work in IE7, but that shouldn't be a big issue anymore */
+
+	background: #ccddff;
+}
+
+#rightbar {
+	position: relative;
+	padding: 8px;
+	width: 63%;
+	display: table-cell; /* doesn't work in IE7, but that shouldn't be a big issue anymore */
+	
+	background: #daedff; /*just in case the gradients don't work*/
+}
+
+html, body {
+	height: 90%; /*If the below fails*/
+ 	height: -moz-calc(100% - 2.5em); /* Firefox */
+ 	height: -webkit-calc(100% - 2.5em); /* Chrome, Safari */
+ 	height: calc(100% - 2.5em); /* IE9+ and future browsers */
+	background: #bbccff;
+}
+
+table img {
+	width: 120px;
+}
+
+ul {
+	padding-left: 20px;
+	margin-left: 20px;
+}
+
+p {
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: justify;
+}
+
+br {
+	clear:both;
+}
+
+h1 {
+	text-align: center;
+	font-family: Georgia, serif;
+	margin: 0;
+}
+
+h3 {
+	margin-left: 5px;
+}
+
+h4 {
+	margin-left: 10px;
+}
+
+a {
+	text-decoration: underline;
+	color: #005500;
+	cursor: pointer;
+}

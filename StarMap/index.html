@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<meta charset="UTF-8">
+		<TITLE>Star Map</TITLE>
+		<script src="papaparse.min.js"></script>
+		<script src="starScript.js"></script>
+		<link href="starStyle.css" rel="stylesheet">
+	</HEAD>
+	<BODY>
+		<header>
+			<h1>Star Map</h1>
+		</header>
+		<div id="instructions">
+			<p>Use the buttons in the navigation pane to traverse the star map. Note that going beyond a pole will invert the left and right buttons. Find the constellation listed right below the navigation buttons, and click the constellation abbreviation in the star map. If HTML5 local storage is enabled, your progress will automatically be saved.</p>
+			<p>The data for the constellation borders is from <a href="http://www.iau.org/public/themes/constellations/">http://www.iau.org/public/themes/constellations/</a>, and the star data is from the Yale Bright Star Catalog <a href="http://tdc-www.harvard.edu/catalogs/bsc5.html">http://tdc-www.harvard.edu/catalogs/bsc5.html</a></p>
+		</div>
+
+		<div id="main_div">
+			<div id="canvas_div">
+				<canvas id="canvas">Canvas failed to load.</canvas>
+			</div>
+
+			<div id="nav_div">
+				<h2>Navigation Pane</h2>
+				<div id="nav">
+					<table>
+						<tr>
+							<td></td>
+							<td><button id="up_btn">&uarr;</button></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><button id="left_btn">&larr;</button></td>
+							<td></td>
+							<td><button id="right_btn">&rarr;</button></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td><button id="down_btn">&darr;</button></td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+
+				<p>Find: <span id="rand_const">&mdash;</span></p>
+				<button id="clear_btn">Clear progress</button>
+			</div>
+		</div>
+
+		<div>
+			<h2>List of Constellations</h2>
+			<h3>Ones that have already been found are in <span class="found">red</span> </h3>
+			<ul id="already_found">
+			</ul>
+		</div>
+
+		
+
+		<!--p id="demo">This is a paragraph for debugging purposes.</p-->
+	</BODY>
+</HTML>

@@ -1,0 +1,134 @@
+.heading{
+    text-align: center;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 10px;
+    background: #eecc88;
+}
+
+.rightColumn{
+    margin-left: 35%;
+    padding: 10px;
+    height: 800px;
+    width: 60%;
+    background: #eedd99;
+}
+
+.stats {
+    padding-top: 20px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background: white;
+}
+
+.TheImage {
+    height: 280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.classListing {
+    background: #bbccff;
+    width: 25%;
+    float: left;
+    margin-left: 5%;
+    padding-left:5px;
+    padding-right: 5px;
+}
+
+.classListing ul{
+    list-style-type: none;
+    padding:0px;
+}
+
+.stats table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats td{
+    width: 11.1111%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stats h3 {
+    background: #bbbbff;
+}
+
+.navBar {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: #eedd77;
+}
+
+.leftColumn {
+    height: 800px;
+    width: 30%;
+    padding: 10px;
+    margin-left: 5%;
+    background: #ffeeaa;
+    float: left;
+    overflow: auto;
+}
+
+.leftColumn img{
+    width: 50px;
+}
+
+.leftColumn table, input {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.leftColumn input {
+    display: block;
+}
+
+td {
+    padding: 5px;
+}
+
+.evenRow {
+    background:#ffee99;
+}
+
+.oddRow {
+    background:#ffdd88; 
+}
+
+.faded {
+    color: #999999;
+}
+
+.carousel-image {
+    margin:auto;
+}
+
+.carousel-caption {
+    text-align: left;
+    color: #880000;
+    left: 15%;
+    top: 0px;
+    font-size: 3em;
+}
+body {
+    background: #ffffdd;
+}
+
+h2, h3 {
+    text-align: center;
+}
+
+a, .clickable {
+    cursor: pointer;
+    cursor: hand;
+}

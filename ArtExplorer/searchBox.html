@@ -1,0 +1,20 @@
+<form name="search">
+	<input ng-model="query" type="search" placeholder="Search">
+	<input type="submit" value="Go!" ><!--ng-click="doSearch(query)"-->
+
+	<a ng-click="randomExample()" class="small">Example search</a><br>
+	<br>
+	<p>The value of query is: {{query}}</p>
+	<input type="checkbox" ng-model="ctrl.showFacets">Show facets
+</form>
+
+<div class="facets" ng-show="ctrl.showFacets">
+	<p>Search in the following facets:</p>
+	<ul>
+		<li ng-repeat="f in ctrl.facetList">
+			<input type="checkbox" ng-model="ctrl.facetSelect[$index]">{{f}}
+		</li>
+	</ul>
+	<button ng-click="ctrl.selectAllFacets()">Select All</button>
+	<button ng-click="ctrl.deselectAllFacets()">Deselect All</button>
+</div>

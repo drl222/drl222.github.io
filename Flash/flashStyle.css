@@ -1,0 +1,59 @@
+header {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	background: #99ee77;
+	width: 94%;
+
+}
+#leftbar {
+	position: relative;
+	float: left;
+	width: 31%;
+	left: 3%;
+	background: #bbffaa;
+}
+
+#rightbar {
+	position: relative;
+	float: right;
+	width: 60%;
+	right: 3%;
+	background: #eeffaa;
+}
+
+#swf {
+	border: 1px solid black;
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+body {
+	background: #eeffcc;
+}
+
+
+ul {
+	list-style:none;
+}
+
+p {
+	padding: 20px;
+	text-align: justify;
+}
+
+br {
+	clear:both;
+}
+
+h1, h3 {
+	text-align: center;
+}
+
+a {
+	text-decoration: underline;
+	color: #005500;
+	cursor: pointer;
+}

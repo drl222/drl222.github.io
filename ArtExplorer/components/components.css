@@ -1,0 +1,46 @@
+#ePanel{
+	float: left;
+	width: 100%;
+	padding: 0px;
+	border: 1px solid #000000;
+	cursor: auto;
+}
+
+.iPanel1{
+	float:center;
+	width: 100%;
+	padding: 0px;
+	background-color: #9999cc;
+	/*background-color: #6699cc;*/
+	border: 2px solid #blue;
+	/*margin-bottom: 3px;*/
+}
+
+.iPanel1 a {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.iPanel2{
+	float:center;
+	width: 100%;
+	padding: 0px;
+	background-color: #669999;
+	border: 2px solid #blue;
+}
+
+.scroll-part{
+	max-height: 130px;
+	overflow: auto;
+}
+
+.pHeading{
+	color: yellow;
+	background-color: #666666;
+	font-size: 14;
+	padding: 5px;
+}
+
+.selected{
+	background-color: yellow;
+}

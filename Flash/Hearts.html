@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<title>Hearts</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style type="text/css" media="screen">
+			html, body {
+				height:100%;
+				background-color:#227744;
+				color:#ccffee;
+			}
+			body {
+				margin:0; 
+				padding:0; 
+			}
+			#flashContent {
+				display:block;
+				width:100%; 
+				height:100%; 
+				text-align:center;
+			}
+			#main {
+				margin:50px;
+				margin-top:0px;
+			}
+			header {
+				text-align:center;
+				font-size:36px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>Chinese Hearts (G&#466;ng Zh&#363; &#25329;&#29482;)</header>
+		<div id="flashContent">
+			<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="800" height="600" id="Hearts" align="middle">
+				<param name="movie" value="Hearts.swf" />
+				<param name="quality" value="high" />
+				<param name="bgcolor" value="#ffffff" />
+				<param name="play" value="true" />
+				<param name="loop" value="true" />
+				<param name="wmode" value="window" />
+				<param name="scale" value="showall" />
+				<param name="menu" value="true" />
+				<param name="devicefont" value="false" />
+				<param name="salign" value="" />
+				<param name="allowScriptAccess" value="sameDomain" />
+				<!--[if !IE]>-->
+				<object type="application/x-shockwave-flash" data="Hearts.swf" width="800" height="600">
+					<param name="movie" value="Hearts.swf" />
+					<param name="quality" value="high" />
+					<param name="bgcolor" value="#ffffff" />
+					<param name="play" value="true" />
+					<param name="loop" value="true" />
+					<param name="wmode" value="window" />
+					<param name="scale" value="showall" />
+					<param name="menu" value="true" />
+					<param name="devicefont" value="false" />
+					<param name="salign" value="" />
+					<param name="allowScriptAccess" value="sameDomain" />
+				<!--<![endif]-->
+					<a href="http://www.adobe.com/go/getflash">
+						<img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player" />
+					</a>
+				<!--[if !IE]>-->
+				</object>
+				<!--<![endif]-->
+			</object>
+		</div>
+		<div id="main">
+			<p>This is a version of Hearts sometimes played in China. As with many card games, there are many variations; this variation is somewhat influenced by Western Hearts. The rules are as follows:</p>
+			<ul>
+				<li>First, pass three cards to another player, as indicated by the arrow. On the first turn, each player passes left. On the second, each player passes right. On the third, each player passes across, and on the fourth, this phase is skipped entirely. The fifth turn returns to passing left, and so on.</li>
+				<li>The Two of Clubs starts. Each trick, going clockwise, each player plays a card that matches the suit of the person who started the trick. A player who no longer has a card of that suit may play any suit. The exception is that on the first turn, players may not play a pointed card (except the Ten of Clubs).</li>
+				<li>When all four players have played in a trick, the player who played the highest card of the original suit takes the trick. Any pointed cards are kept in hand (not shown in this applet), and the remaining ones are discarded. This player starts the next trick. (S)He may play any card, except potentially a Heart: a Heart can only lead a trick if (a) the player has no other cards in his/her hand OR (b) someone has already played a Heart in this round.</li>
+				<li>At the end of a round, the points are tallied up. If anyone has more than 1000 points, the person loses. The game ends and the person with the least points wins.</li>
+				<li>The pointed cards are as follows:
+				<ul>
+					<li>Queen of Spades "The Pig" (worth 100 points)</li>
+					<li>Jack of Diamonds "The Goat" (worth -100 points; this is the only negative-valued ["good"] card)</li>
+					<li>Two through Ten of Hearts (worth their face value, e.g. a Six of Hearts is worth 6 points)</li>
+					<li>Jack of Hearts (worth 20 points)</li>
+					<li>Queen of Hearts (worth 30 points)</li>
+					<li>King of Hearts (worth 40 points)</li>
+					<li>Ace of Hearts (worth 50 points)</li>
+					<li>Ten of Clubs (worth nothing on its own, but doubles all other points taken this round, positive or negative)</li>
+				</ul></li>
+				<li>One exception to this pointing rule is that if someone takes all the Hearts in a round, instead of taking 194 points, everyone else takes a flat 200 points. Doing so is called "shooting the moon." If the player also has the Ten of Clubs, everyone else takes 400 points instead of 200. If (s)he has the Queen of Spades, it is negated, but if (s)he has the Jack of Diamonds, it is still worth -100 points (or -200, if doubled). Otherwise, If someone else has the Ten of Clubs, Queen of Spades, and/or Jack of Diamonds, these points are tallied <em>before</em> taking into account the shooting the moon.</p>
+			</ul>
+			<p>Please note that the AI is not yet implemented; the three opponents play random legal cards, which oftentimes are quite stupid decisions. Also, for purposes of the score chart, you (South) are Player 0, West is Player 1, North is Player 2, and East is Player 3.</p>
+		</div>
+	</body>
+</html>

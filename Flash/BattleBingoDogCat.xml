@@ -1,0 +1,240 @@
+<BattleCard>
+<pkmn>
+ <name>Mightyena</name>
+ <type1>dark</type1>
+ <type2>none</type2>
+ <hptotal>140</hptotal>
+ <attack>105</attack>
+ <defense>85</defense>
+ <sdefense>75</sdefense>
+ <speed>87</speed>
+ <attacktype>
+  <name>Crunch</name>
+  <type>dark</type>
+  <power>80</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Arcanine</name>
+ <type1>fire</type1>
+ <type2>none</type2>
+ <hptotal>160</hptotal>
+ <attack>115</attack>
+ <defense>95</defense>
+ <sdefense>95</sdefense>
+ <speed>110</speed>
+ <attacktype>
+  <name>Flamethrower</name>
+  <type>fire</type>
+  <power>95</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Delcatty</name>
+ <type1>normal</type1>
+ <type2>none</type2>
+ <hptotal>140</hptotal>
+ <attack>80</attack>
+ <defense>80</defense>
+ <sdefense>70</sdefense>
+ <speed>85</speed>
+ <attacktype>
+  <name>Return</name>
+  <type>normal</type>
+  <power>102</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Manectric</name>
+ <type1>electric</type1>
+ <type2>none</type2>
+ <hptotal>140</hptotal>
+ <attack>120</attack>
+ <defense>75</defense>
+ <sdefense>75</sdefense>
+ <speed>120</speed>
+ <attacktype>
+  <name>Thunderbolt</name>
+  <type>electric</type>
+  <power>95</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Absol</name>
+ <type1>dark</type1>
+ <type2>none</type2>
+ <hptotal>130</hptotal>
+ <attack>145</attack>
+ <defense>75</defense>
+ <sdefense>75</sdefense>
+ <speed>90</speed>
+ <attacktype>
+  <name>X-Scissor</name>
+  <type>bug</type>
+  <power>80</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Luxray</name>
+ <type1>electric</type1>
+ <type2>none</type2>
+ <hptotal>150</hptotal>
+ <attack>135</attack>
+ <defense>94</defense>
+ <sdefense>94</sdefense>
+ <speed>85</speed>
+ <attacktype>
+  <name>Crunch</name>
+  <type>dark</type>
+  <power>80</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Houndoom</name>
+ <type2>fire</type2>
+ <type1>dark</type1>
+ <hptotal>145</hptotal>
+ <attack>125</attack>
+ <defense>65</defense>
+ <sdefense>95</sdefense>
+ <speed>110</speed>
+ <attacktype>
+  <name>Flamethrower</name>
+  <type>fire</type>
+  <power>95</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Granbull</name>
+ <type1>normal</type1>
+ <type2>none</type2>
+ <hptotal>160</hptotal>
+ <attack>135</attack>
+ <defense>90</defense>
+ <sdefense>75</sdefense>
+ <speed>60</speed>
+ <attacktype>
+  <name>Earthquake</name>
+  <type>ground</type>
+  <power>100</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Espeon</name>
+ <type1>psychic</type1>
+ <type2>none</type2>
+ <hptotal>135</hptotal>
+ <attack>145</attack>
+ <defense>75</defense>
+ <sdefense>110</sdefense>
+ <speed>125</speed>
+ <attacktype>
+  <name>Signal Beam</name>
+  <type>bug</type>
+  <power>75</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Lucario</name>
+ <type2>steel</type2>
+ <type1>fighting</type1>
+ <hptotal>140</hptotal>
+ <attack>130</attack>
+ <defense>85</defense>
+ <sdefense>85</sdefense>
+ <speed>105</speed>
+ <attacktype>
+  <name>Dragon Pulse</name>
+  <type>dragon</type>
+  <power>90</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Ninetales</name>
+ <type2>fire</type2>
+ <type1>none</type1>
+ <hptotal>143</hptotal>
+ <attack>96</attack>
+ <defense>90</defense>
+ <sdefense>115</sdefense>
+ <speed>115</speed>
+ <attacktype>
+  <name>Flamethrower</name>
+  <type>fire</type>
+  <power>95</power>
+  <physical>0</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Persian</name>
+ <type2>normal</type2>
+ <type1>none</type1>
+ <hptotal>135</hptotal>
+ <attack>85</attack>
+ <defense>75</defense>
+ <sdefense>80</sdefense>
+ <speed>130</speed>
+ <attacktype>
+  <name>Seed Bomb</name>
+  <type>grass</type>
+  <power>80</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Purugly</name>
+ <type1>normal</type1>
+ <type2>none</type2>
+ <hptotal>141</hptotal>
+ <attack>97</attack>
+ <defense>79</defense>
+ <sdefense>74</sdefense>
+ <speed>127</speed>
+ <attacktype>
+  <name>Shadow Claw</name>
+  <type>ghost</type>
+  <power>70</power>
+  <physical>1</physical>
+  <acc>100</acc>
+ </attacktype>
+</pkmn>
+<pkmn>
+ <name>Umbreon</name>
+ <type1>dark</type1>
+ <type2>none</type2>
+ <hptotal>165</hptotal>
+ <attack>80</attack>
+ <defense>125</defense>
+ <sdefense>145</sdefense>
+ <speed>80</speed>
+ <attacktype>
+  <name>Iron Tail</name>
+  <type>steel</type>
+  <power>100</power>
+  <physical>1</physical>
+  <acc>75</acc>
+ </attacktype>
+</pkmn>
+</BattleCard>

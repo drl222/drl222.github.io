@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<HTML>
+	<HEAD>
+		<title>Art Explorer</title>
+		<!--script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="components/components.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    	<script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+		<script src="app.js"></script>
+		<script src="components/facets.js"></script>
+	</HEAD>
+	<BODY>
+		<header><h1>Welcome to the Art Explorer</h1></header>
+		<div id="main" ng-app="art">
+
+			<div ng-controller="theController as ctrl">
+				<div id="top-search">
+					<form>
+						<input ng-model="query" type="search" placeholder="Search">
+						<input type="submit" value="Go!" ng-click="doSearch(query)">
+						<a class="small" ng-click="randomExample()">Example search</a>
+					</form>
+				</div>
+
+				<div id="search-bar-wrapper" >
+					<strong>Refine by Facet Mapping</strong>
+					<accordion close-others="true">
+						<div ng-controller="componController">
+							<accordion-group class="search-bar" ng-repeat="f in searchesList" heading="{{f}}">
+									<div ng-facet></div>
+							</accordion-group>
+						</div>
+					</accordion>
+				</div>
+
+
+
+				<div id="search-results">
+					<h2>Search Results</h2>
+					<section ng-show="results">
+						<p>{{returnResult("numrows")}} results found for {{returnResult("query")}}.</p>
+
+						<p>
+						    <a ng-click="changePage(-1)" ng-class="{unclickable: (currentPage <= 0)}">
+						        &larr;Previous Page
+						    </a>
+						    Page {{currentPage+1}}/{{numberOfPages()}}
+						    <a ng-click="changePage(1)" ng-class="{unclickable: (currentPage >= numberOfPages() - 1)}">
+						        Next Page&rarr;
+						    </a>
+						</p>
+						<div class="result-obj" ng-repeat="record in returnResult('records') | startFrom: currentPage*pageSize | limitTo: pageSize">
+							<img ng-src="{{returnRecord($index+currentPage*pageSize, 'url')}}" tooltip-placement="right" tooltip-html-unsafe="<img src='{{returnRecord($index+currentPage*pageSize, 'url') | largeImage}}'>">
+							<br>
+							<p class="title">{{returnRecord($index+currentPage*pageSize, "Title")}}</p>
+							<ul class="left-align">
+								<li><strong>Creator: </strong>{{returnRecord($index+currentPage*pageSize, "creator")}}</li>
+								<li><strong>Material: </strong>{{returnRecord($index+currentPage*pageSize, "Material")}}</li>
+								<li><strong>Subject: </strong>{{returnRecord($index+currentPage*pageSize, "subject")}}</li>
+							</ul>
+						</div>
+					</section>
+					<section ng-show="results === null">
+						<h2 class="left-align">Loading...</h2>
+					</section>
+				</div><!--#search-results-->
+			</div><!--ng-controller="theController"-->
+		</div><!--#main-->
+		<footer>
+			<div class="right-align">
+				<img src="images/cciLogo.jpg">
+				<img src="images/imlsLogo.jpg">
+			</div>
+		</footer>
+	</BODY>
+</HTML>

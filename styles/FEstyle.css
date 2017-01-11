@@ -1,0 +1,102 @@
+body {
+  background: #ffdd99;
+}
+
+h2 {
+  text-align: center
+}
+
+.container {
+  position: relative;
+}
+
+.characters {
+  background: #441100;
+  color: #ffffee;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+.thumb {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 66px;
+  height: auto;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background: #ffaa77;
+  color: #331100;
+}
+
+
+th, td {
+  width: 33.33%;
+  background: #dd7733;
+}
+
+th {
+  font-size: 2em;
+}
+
+
+
+
+
+
+
+
+
+/*
+/* app css stylesheet ENDOFCOMMENT
+
+body {
+  padding-top: 20px;
+}
+
+h2 {
+  text-align: center
+}
+
+.container {
+  position: relative;
+}
+
+.characters {
+  background: black;
+  color: white;
+}
+
+.thumb {
+  float: right;
+  clear: right;
+  margin: -1em 1em 1.5em 0em;
+  padding-bottom: 1em;
+  height: 100%;
+  /*width: auto;
+  position: absolute;
+  right: 0px;ENDOFCOMMENT
+}
+
+.characters li {
+  /*clear: both;ENDOFCOMMENT
+  list-style: none;
+  height: 80px;
+  padding-top: 2px;
+  background: black;
+  color: white;
+  font-size: 3em;
+  font-family: veranda;
+}
+
+.characters table {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  border: solid white;
+}*/
